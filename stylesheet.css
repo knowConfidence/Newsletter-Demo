@@ -1,0 +1,128 @@
+.container_left{
+	display: flex;
+	flex-wrap: wrap;
+
+	justify-content: flex-start;
+}
+
+.container_right{
+	display: flex;
+	flex-wrap: wrap;
+
+	justify-content: flex-end;
+}
+
+.container_center{
+	display: flex;
+	flex-wrap: wrap;
+
+	justify-content: center;
+}
+
+.title{
+    font-size:100%;
+    letter-spacing:1px;
+
+    line-height: 1.6875;
+    font-family: Georgia;
+}
+.subtitle{
+	font-size:90%;
+    letter-spacing:1px;
+
+    line-height: 1.6875;
+    font-family: Georgia;
+}
+.text{
+	font-size: 80%;
+	letter-spacing: 1px;
+
+	line-height: 1.6875;
+	font-family: Georgia;
+}
+.subText{
+    font-size: 70%;
+    letter-spacing: 1px;
+
+    line-height: 1.6875;
+    font-family: Georgia;
+}
+
+.clamp{
+	padding: 0;
+    margin: 0;
+}
+
+.frame{
+	padding: 10px 10px;
+}
+
+/* Resize text as screen is resized */
+@media only screen and (min-width:300px) and (max-width:400px){
+    .title{font-size:60%;}
+    .subtitle{font-size: 50%;}
+    .text{font-size: 40%;}
+    .subtext{font-size: 30%;};
+}
+@media only screen and (min-width:401px) and (max-width:800px){
+    .title{font-size:70%;}
+    .subtitle{font-size: 60%;}
+    .text{font-size: 50%;}
+    .subtext{font-size: 40%;}
+}
+@media only screen and (min-width:801px){
+    .title{font-size:100%;}
+    .subtitle{font-size: 90%;}
+    .text{font-size: 80%;}
+    .subtext{font-size: 70%;};
+    /*.wrap{max-width:770px;}*/
+}
+
+html, body{
+    font-size: 100%;
+    line-height: 1.6875;
+    font-family: Georgia;
+    background-color: lightgrey;
+}
+
+.f_left{
+    float:left;
+}
+.f_right{
+    float:right;
+}
+
+.cant_read{
+    background-color: grey;
+    color: white;
+}
+
+.main_container{
+    background-color: white;
+}
+
+.pre{
+    text-align: left;
+    white-space: pre-line;
+    word-break: keep-all;
+}
+
+.get_button{
+    background-color: #7fc170;
+    color: white;
+}
+
+.card{
+    border: none;
+    border-radius: 0px;
+}
+
+.image{
+}
+
+.info{
+
+}
+
+.footer{
+}
