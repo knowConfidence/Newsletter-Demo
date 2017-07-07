@@ -31,5 +31,5 @@ function resizeCard(){
 		height = i_height;
 	}
 
-	card.css("height", height);
+	card.css("height", height+10);
 }
