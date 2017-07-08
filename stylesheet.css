@@ -115,12 +115,12 @@ html, body{
 .card{
     border: none;
     border-radius: 0px;
+    overflow: hidden;
 }
 
 .image{
     top: 50%;
     transform: translateY(-50%);
-    overflow: hidden;
 }
 
 .info{
