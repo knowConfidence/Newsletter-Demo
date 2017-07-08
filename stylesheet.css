@@ -62,19 +62,22 @@
     .title{font-size:60%;}
     .subtitle{font-size: 50%;}
     .text{font-size: 40%;}
-    .subtext{font-size: 30%;};
+    .subtext{font-size: 30%;}
+    .icon img{width: 10px;}
 }
 @media only screen and (min-width:401px) and (max-width:800px){
     .title{font-size:80%;}
     .subtitle{font-size: 70%;}
     .text{font-size: 60%;}
     .subtext{font-size: 50%;}
+    .icon img{width: 15px;}
 }
-@media only screen and (min-width:801px) and (max-width:1100px){
+@media only screen and (min-width:801px) {
     .title{font-size:100%;}
     .subtitle{font-size: 90%;}
     .text{font-size: 80%;}
-    .subtext{font-size: 70%;};
+    .subtext{font-size: 70%;}
+    .icon img{width: 20px;}
     /*.wrap{max-width:770px;}*/
 }
 
@@ -124,6 +127,8 @@ html, body{
 }
 
 .info{
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .footer{

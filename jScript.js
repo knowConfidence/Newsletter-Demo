@@ -15,6 +15,7 @@ function resizeCard(){
 	$(".card").each(function(){
 		
 		var card = $(this);
+		card.find("img").removeAttr("height");
 
 		var i_height = card.find(".image").outerHeight();
 		var t_height = card.find(".info").outerHeight();
@@ -23,6 +24,7 @@ function resizeCard(){
 		if(t_height > i_height){
 
 			height = t_height;
+			card.find("img").attr("height", height+"px");
 		}
 		else{
 
