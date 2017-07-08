@@ -65,10 +65,10 @@
     .subtext{font-size: 30%;};
 }
 @media only screen and (min-width:401px) and (max-width:800px){
-    .title{font-size:70%;}
-    .subtitle{font-size: 60%;}
-    .text{font-size: 50%;}
-    .subtext{font-size: 40%;}
+    .title{font-size:80%;}
+    .subtitle{font-size: 70%;}
+    .text{font-size: 60%;}
+    .subtext{font-size: 50%;}
 }
 @media only screen and (min-width:801px) and (max-width:1100px){
     .title{font-size:100%;}
