@@ -119,6 +119,7 @@ html, body{
 .image{
     top: 50%;
     transform: translateY(-50%);
+    overflow: hidden;
 }
 
 .info{
