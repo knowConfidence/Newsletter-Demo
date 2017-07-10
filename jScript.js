@@ -12,27 +12,26 @@ $(document).ready(function(){
 
 function resizeCard(){
 
-	$(".v1").find(".w_image").addClass("f_left");
-	$(".v1").find(".w_text").addClass("f_right");
-
-	$(".v2").find(".w_image").addClass("f_right");
-	$(".v2").find(".w_text").addClass("f_left");
-
-	$(".wrapper").each(function(){
+	$(".card").each(function(){
 		
-		var image = $(this).find(".w_image");
-		var text = $(this).find(".w_text");
+		var card = $(this);
+		card.find("img").removeAttr("height");
 
-		image.removeClass("w_cen");
-		text.removeClass("w_cen");
+		var i_height = card.find(".image").outerHeight();
+		var t_height = card.find(".info").outerHeight();
+		var height = 0;
 
-		if(image.outerHeight() > text.outerHeight()){
-			text.addClass("w_cen");
+		if(t_height > i_height){
+
+			height = t_height;
+			card.find("img").attr("height", height+"px");
 		}
 		else{
-			image.addClass("w_cen");
+
+			height = i_height;
 		}
-		
+
+		card.css("height", height);
 	});
 
 }
