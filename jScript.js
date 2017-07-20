@@ -1,37 +1,52 @@
 $(document).ready(function(){
 
+	var width = $(window).width();
+
 	resizeCard();
 
 	$(window).resize(function(){
 
-		resizeCard();
+		var newWidth = $(window).width();
+
+		//scrollbars can cause resize event to occur
+		//this is an additional check to make sure orrientation has indeed changed
+		if(width != newWidth){
+
+			//init width to new width
+			width = newWidth;
+
+			//call resizeCard
+			resizeCard();
+		}
 
 	});
 
 });
 
+//adjusts image size to fit container when document/orrientation is changed
 function resizeCard(){
 
-	$(".card").each(function(){
+	$(".v1").find(".w_image").addClass("f_left");
+	$(".v1").find(".w_text").addClass("f_right");
+
+	$(".v2").find(".w_image").addClass("f_right");
+	$(".v2").find(".w_text").addClass("f_left");
+
+	$(".wrapper").each(function(){
 		
-		var card = $(this);
-		card.find("img").removeAttr("height");
+		var image = $(this).find(".w_image");
+		var text = $(this).find(".w_text");
 
-		var i_height = card.find(".image").outerHeight();
-		var t_height = card.find(".info").outerHeight();
-		var height = 0;
+		image.removeClass("w_cen");
+		text.removeClass("w_cen");
 
-		if(t_height > i_height){
-
-			height = t_height;
-			card.find("img").attr("height", height+"px");
+		if(image.outerHeight() > text.outerHeight()){
+			text.addClass("w_cen");
 		}
 		else{
-
-			height = i_height;
+			image.addClass("w_cen");
 		}
-
-		card.css("height", height);
+		
 	});
 
 }

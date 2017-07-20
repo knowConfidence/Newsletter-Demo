@@ -1,18 +1,28 @@
+/*import Google Font Open Sans*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+/*reset all elements*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+/*align content Left*/
 .container_left{
 	display: flex;
 	flex-wrap: wrap;
 
 	justify-content: flex-start;
 }
-
+/*align content right*/
 .container_right{
 	display: flex;
 	flex-wrap: wrap;
 
 	justify-content: flex-end;
 }
-
+/*align content center*/
 .container_center{
 	display: flex;
 	flex-wrap: wrap;
@@ -20,40 +30,44 @@
 	justify-content: center;
 }
 
+/*text styling*/
 .title{
     font-size:100%;
     letter-spacing:1px;
 
     line-height: 1.6875;
-    font-family: Georgia;
+    font-family: 'Open Sans', sans-serif;
 }
 .subtitle{
 	font-size:90%;
     letter-spacing:1px;
 
     line-height: 1.6875;
-    font-family: Georgia;
+    font-family: 'Open Sans', sans-serif;
 }
 .text{
 	font-size: 80%;
 	letter-spacing: 1px;
 
 	line-height: 1.6875;
-	font-family: Georgia;
+	font-family: 'Open Sans', sans-serif;
 }
 .subText{
     font-size: 70%;
     letter-spacing: 1px;
 
     line-height: 1.6875;
-    font-family: Georgia;
+    font-family: 'Open Sans', sans-serif;
 }
 
+/*reset emelemt*/
 .clamp{
 	padding: 0;
     margin: 0;
+    border: 0;
 }
 
+/*add padding to element*/
 .frame{
 	padding: 10px 10px;
 }
@@ -64,36 +78,51 @@
     .subtitle{font-size: 50%;}
     .text{font-size: 40%;}
     .subtext{font-size: 30%;}
-    .icon img{width: 10px;}
 }
 @media only screen and (min-width:401px) and (max-width:800px){
     .title{font-size:80%;}
     .subtitle{font-size: 70%;}
     .text{font-size: 60%;}
     .subtext{font-size: 50%;}
-    .icon img{width: 15px;}
 }
 @media only screen and (min-width:801px) {
     .title{font-size:100%;}
     .subtitle{font-size: 90%;}
     .text{font-size: 80%;}
     .subtext{font-size: 70%;}
-    .icon img{width: 20px;}
     /*.wrap{max-width:770px;}*/
 }
 
+/*default html and body styling*/
 html, body{
     font-size: 100%;
     line-height: 1.6875;
-    font-family: Georgia;
+    font-family: 'Open Sans', sans-serif;
     background-color: lightgrey;
 }
 
+
+/*page specific styling*/
+.w_image{
+	display: inline;
+	max-width: 50%;
+}
+.w_text{
+	display: inline;
+	max-width: 50%;
+	height: auto;
+}
+.w_cen{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
 .f_left{
-    float:left;
+	float: left;
 }
 .f_right{
-    float:right;
+	float: right;
 }
 
 .cant_read{
@@ -101,36 +130,53 @@ html, body{
     color: white;
 }
 
-.main_container{
-    background-color: white;
+.cant_read a{
+    color: white;
+    text-decoration: none;
+}
+.cant_read a:hover{
+    color: white;
+    text-decoration: underline;
 }
 
-.pre{
-    text-align: left;
-    white-space: pre-line;
-    word-break: keep-all;
+.main_wrapper{
+	background-color: white;
 }
 
-.get_button{
+.w_text{
+	padding: 0px 5%;
+}
+
+.welcome_msg{
+	padding: 20px;
+}
+
+.get_cocoon{
     background-color: #7fc170;
     color: white;
+    margin-top: 4%;
+    text-decoration: none;
+}
+.get_cocoon a{
+    color: white;
+    text-decoration: none;
+}
+.get_cocoon a:hover{
+    text-decoration: underline;
 }
 
-.card{
-    border: none;
-    border-radius: 0px;
+
+.cards{
+	margin-top: 4%; 
 }
 
-.image{
-    top: 50%;
-    transform: translateY(-50%);
-    overflow: hidden;
-}
-
-.info{
-    top: 50%;
-    transform: translateY(-50%);
+.outtro{
+	padding: 20px;
+	margin-top: 2%;
 }
 
 .footer{
+	margin-top: 4%;
+    padding: 20px 20px;
+	background-color: grey;
 }
